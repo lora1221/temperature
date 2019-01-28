@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Temperature = function(celsius) {
+        this.celcius = celsius;
+        this.convertToF = function(){
+            return celsius*9/5 + 32;
+        };
+        this.convertToK = function(){
+            return celsius + 273.15;
+        };
+    };
+
+    do {
+        var c = parseInt(prompt("Enter celsius (higher than -273 degree): "));
+    } while(c < -273);
+
+    temperature = new Temperature(c);
+    document.write(c + "C = " + temperature.convertToF() + "F = " + temperature.convertToK() + "K");
+</script>
+</body>
+</html>
